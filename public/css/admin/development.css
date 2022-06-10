@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');/*font-family: 'Roboto', sans-serif;*/
+/* .bg-black{background-color: rgb(37 39 38 / 95%) !important;} */
+.text-white {color: #ffffff;}
+#adminLoginForm label.error {color: #D32929; font-weight: normal !important; margin-bottom: 0; width: 100%; font-size: 14px; margin-top: 5px; display: block;}
+form label.error {color: #ebb6b6; font-weight: normal !important; margin-bottom: 0; width: 100%; font-size: 100%; margin-top: 5px; display: block;}
+.invalid-feedback {width: 90%; font-size: 14px;}
+.red_star {color: #D32929; padding-left: 1px;}
+.toast {opacity: 1 !important;}
+.toast-close-button i.fa-times {text-shadow: 0 1px 0 #000; font-size: 14px;}
+
+#loading, #dataTableLoading {display: none; width: 100%; height: 100%; top: 0; left: 0; position: fixed; opacity: 0.85; background-color: #fff; cursor: wait; text-align: center; z-index: 9999; }
+#loading-image, .theme-loader {position: fixed; top: 50%; z-index: 100; display: inline-block; left: 50%; transform: translate(-50%,-50%); }
+
+.over-ride-padding-left {padding-left: 0 !important;}
+
+.shadow-md {box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(169,184,200,.2);}
+
+.notifications {position: absolute; top: 0; width: 100%; z-index: 9999;}
+.notifications .alert {border-radius: 0;}
+.user-dropdown-section {min-width: 320px;}
+
+.list-data .zeroColumn {min-width: 0 !important; width: 0 !important;}
+.list-data .firstColumn {min-width: 40px; width: 40px;}
+.list-data .imageColumn {min-width: 60px; width: 60px;}
+.list-data .modifiedColumn {min-width: 135px; width: 135px;}
+.list-data .row_status {min-width: 48px; width: 48px;}
+.list-data .actions {min-width: 100px; width: 100px;}
+.list-data .more_actions {min-width: 110px; width: 110px;}
+
+form .form-control {font-size: 15px;}
+form label {margin-bottom: 0.3rem;}
+
+/* #adminLoginForm .form-control {border-radius: 5px;} */
+#adminLoginForm .custom-checkbox{padding-left: 1.5rem;}
+
+.table-th-display-none {display: block;}
+#list-table_wrapper .row:nth-child(3) {margin-top: 1.5rem;}
+.image-preview-border {padding: 5px; border: 1px solid #e9ecef;}
+.image-preview-holder {position: relative;}
+.delete-preview-image {position: absolute !important; top: -10px; right: -20px; background: #D3D3D3; padding: 5px 10px; border-radius: 50%; color: #ff0000; cursor: pointer;}
+.btn-default {background-color: #f8f9fa; border-color: #ddd; color: #444;}
+.custom-checkbox {padding-top: 0.3rem; padding-bottom: 0rem; padding-left: 0.2rem;}
+.checkAll, .delete_checkbox, .check {cursor: pointer; width: 15px; height: 15px;}
+.badge {font-size: 90%;}
+.btn-circle-sm {width: 32px; height: 32px; padding: 6px 9px 12px 8px;}
+.btn-circle-sm-trash {width: 32px; height: 32px; padding: 6px 9px 12px 7px;}
+.btn-circle-sm-eye{width: 32px; height: 32px; padding: 6px 9px 12px 6px;}
+.custom-table thead th {color: #4F5467;}
+table.custom-table-first-column td:nth-child(1), table.custom-table-second-column td:nth-child(2) {color: #4F5467;}
+table .dropdown-item {color: #4F5467 !important;}
+table .dropdown-item:active {color: #fff !important;}
+
+.mb-14 {margin-bottom: 14px;}
+.crop_image {cursor: pointer;}
+.image-border {border: 2px solid #e8eef3; padding: 3px;}
+
+/* -------------- Sort ---------------- */
+.dd-item, .dd-empty, .dd-placeholder {font-size: 1rem !important;}
+.dd-handle {height: auto !important;}
+
+.preview-image {background: #7F7F7F; width: 100%; padding: 8px 2px; text-align: center;}
+.mainSelectDeselectAll, .selectDeselectAll{cursor: pointer;}
+.gallery-image-holder {height: 280px; width: 280px !important;}
+.display-inline-block {display: inline-block !important;}
+.custom-radio {height: 15px; width: 15px; cursor: pointer; margin-top: 2px; margin-left: -0.1px;}
+
+/* -------------- Role Permission ----------------- */
+ul,li {list-style: none; padding: 0;}
+.permission-content li {width: 20%;float: left; margin-bottom: 15px;}
+.permission-content li span {margin-left: 0px; font-weight: normal;}
+.permission-title {background: #e2e3e5; color: #383d41; padding: 10px; margin-top: 12px; overflow: hidden;border-top-left-radius: .25rem; border-top-right-radius: .25rem;}
+.permission-title div {float: right;}
+.permission-title div span {float: right; margin-left: 0px; color: #ffffff; font-weight: normal;}
+.permission-title div input {}
+.permission-title h2 {margin: 0; font-size: 15px; float: left;font-weight: normal; padding-top: 10px;}
+.permission-content {overflow: hidden; padding: 12px; border: 1px solid #e0e0e0; border-bottom-left-radius: .25rem; border-bottom-right-radius: .25rem;}
+.permission-title .all-select{float: right; margin-left: 0px; color: #212529; font-weight: normal;}
+.add-edit-permission-wrap .col-md-12:last-child {margin-bottom: 12px;}
+.add-edit-permission-wrap>.permission-title {background: #fff}
+.individual_section{padding: 0;}
+.va-top{vertical-align: middle;}
+.cursor-pointer{cursor: pointer;}
+/* -------------- Role Permission ----------------- */
+.custom_font{font-size: 15px;}
+.btn-bulkAction{padding: 2px 5px;}
+.custom-padding0{padding: 0 6px;}
+.select2{line-height: 25px;}
+.select2 .select2-selection{min-height: 38px !important;}
+.select2 .select2-selection--single{padding: 0.66875rem .75rem !important;}
+.select2 .selection .select2-selection--single .select2-selection__arrow{top: 2px;}
+
+.margintop10{margin-top: 10px;}
+.margintop20{margin-top: 20px;}
+.marginbottom17{margin-bottom: 17px;}
+.preview_image{background:#7F7F7F; width:100%; padding:50px 58px; height:300px; text-align: center;}
+.preview_image img{border: 2px solid #ffffff;}
+
+.grab {cursor: -webkit-grab; cursor: grab;}
+/* #nestable ol.dd-list{display: flex; flex-wrap: wrap;}
+#nestable ol.dd-list li{-ms-flex: 0 0 50%; flex: 0 0 50%; max-width: 46%; margin: 5px 15px;} */
+#nestable ol.dd-list li {
+    border-radius: .25rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+.radioDefault{padding-left: 35px !important;}
+.radio-holder-default{padding: .25rem 0 !important;}
+.radio-margin{margin: 0 -3px 0 4px !important;}
+.list-image-holder{height: 50px;}
+.service-preview-image{background: #7F7F7F; width: 100%; padding: 8px 2px; text-align: center;}
+.map-search{width: 75%; top: 12px !important;}
+.login-logo, .register-logo{background:#0a0909; margin-bottom: 0; padding-top: 20px;}
+.login-card-body, .register-card-body{background:#0a0909;}
+.login-box-msg{color: #fff;}
+.login-logo img{width: 85%;}
+
+.paddingmargin0{padding: 0; margin: 0;}
+
+.menu_dropdown_option {border: 1px solid #ccc; margin-left: 8px; margin-right: 0px; padding: 10px 0 15px 0; border-radius: 5px;}
+.margin0{margin: 0 !important;}
+.export-all-contacts{float: right;}
+
+.error{--border-opacity: 1; border-color: #D32929; border-color: rgba(211, 41, 41, var(--border-opacity));}
+
+.notfound {width: 100%; text-align: center;}  
+.notfound .notfound-404 {height: 280px; position: relative; z-index: -1; }
+.notfound .notfound-404 h1 {font-size: 230px; margin: 0px; font-weight: 900; position: absolute; left: 50%; 
+    -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); background: url('../../images/admin/background/error-bg.jpg') no-repeat; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-size: cover; background-position: center; }
+.notfound .notfound-404 {height: 280px; position: relative; z-index: -1; }
+
+.hover-dark{color: #1c2d41;}
+.hover-warning{color: #fcac38;}
+.hover-danger{color: #ff0f3c;}
+.hover-success{color: #1b9e64;}
+
+.justfy-content-center{justify-content: center;}
+.custom-select-set-date-time {
+    height: 44px;
+    line-height: 25px;
+    padding: 10px 30px 13px 30px;
+}
+.text-center{text-align: center;}
+
+.search-toggle{padding: 25px 0 0 25px; border: none;}
+.search-toggle-icon{position: absolute; top: 5px; right: 0px;}
+.display-none{display: none;}
+.erase-absolute{position: absolute; top: 36px; right: 20px;}
+
+@media only screen and (max-width: 767px) {
+    .notfound .notfound-404 {height: 142px;}
+    .notfound .notfound-404 h1 {font-size: 130px;}
+    .auth-wrapper {min-height: 0;}
+}
+@media only screen and (max-width: 592px) {
+    .notfound .notfound-404 {height: 142px;}
+    .notfound .notfound-404 h1 {font-size: 110px;}
+    .export-all-contacts{float: none;}
+}
