@@ -1017,6 +1017,164 @@ $(document).ready(function() {
     });
     // End :: Pickleball Court Form //
 
+    // Start :: League Form //
+    $("#createLeagueForm").validate({
+        ignore: ":hidden",
+        debug: false,
+        rules: {
+            title: {
+                required: true,
+            },
+            zip: {
+                required: true,
+                valid_5_digit_number: true,
+            },
+            play_type: {
+                required: true,
+            },
+            gender: {
+                required: true,
+            },
+            rating: {
+                required: true,
+            },
+            amount: {
+                required: true,
+                valid_amount: true
+            },
+            maximum_registration_allowed: {
+                required: true,
+                valid_positive_number: true,
+            },
+        },
+        messages: {
+            title: {
+                required: "Please enter title.",
+            },
+            zip: {
+                required: "Please enter zip code.",
+                valid_5_digit_number: "Please enter valid 5 digit zip code.",
+            },
+            play_type: {
+                required: "Please select play type.",
+            },
+            gender: {
+                required: "Please select gender.",
+            },
+            rating: {
+                required: "Please select rating.",
+            },
+            amount: {
+                required: "Please enter amount.",
+                valid_amount: "Please enter valid amount.",
+            },
+            maximum_registration_allowed: {
+                required: "Please enter maximum registration allowed.",
+                valid_positive_number: "Please enter valid maximum registration allowed.",
+            },
+        },
+        errorClass: 'error invalid-feedback',
+        errorElement: 'div',
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).removeClass('is-invalid');
+        },
+        invalidHandler: function(form, validator) {
+            var numberOfInvalids = validator.numberOfInvalids();
+            if (numberOfInvalids) {
+                overallErrorMessage = numberOfInvalids == 1 ? pleaseFillOneField : pleaseFillMoreFieldFirst + numberOfInvalids + pleaseFillMoreFieldLast;
+            } else {
+                overallErrorMessage = '';
+            }
+            toastr.error(overallErrorMessage, errorMessage+'!');
+        },
+        errorPlacement: function(error, element) {
+            error.insertAfter(element);
+        },
+        submitHandler: function(form) {
+            $('#btn-processing').html(btnSavingPreloader);
+            $('.preloader').show();
+            form.submit();
+        }
+    });
+
+    $("#updateLeagueForm").validate({
+        ignore: ":hidden",
+        debug: false,
+        rules: {
+            code: {
+                required: true,
+                valid_coupon_code: true
+            },
+            maximum_number_of_use: {
+                required: true,
+                valid_positive_number: true,
+            },
+            discount_type: {
+                required: true
+            },
+            amount: {
+                required: true,
+                valid_amount: true
+            },
+            start_time: {
+                required: true
+            }
+        },
+        messages: {
+            code: {
+                required: "Please enter promo code.",
+                valid_coupon_code: "Promo code consist only alphabets and numbers.",
+            },
+            maximum_number_of_use: {
+                required: "Please enter maximum number of use.",
+                valid_positive_number: "Please enter maximum number of use.",
+            },
+            discount_type: {
+                required: "Please select discount type.",
+            },
+            cart_amount: {
+                required: "Please enter minimum amount.",
+                valid_amount: "Please enter valid amount.",
+            },
+            amount: {
+                required: "Please enter amount.",
+                valid_amount: "Please enter valid amount.",
+            },
+            start_time: {
+                required: "Please select start date & time.",
+            }
+        },
+        errorClass: 'error invalid-feedback',
+        errorElement: 'div',
+        highlight: function (element, errorClass, validClass) {
+            $(element).addClass('is-invalid');
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).removeClass('is-invalid');
+        },
+        invalidHandler: function(form, validator) {
+            var numberOfInvalids = validator.numberOfInvalids();
+            if (numberOfInvalids) {
+                overallErrorMessage = numberOfInvalids == 1 ? pleaseFillOneField : pleaseFillMoreFieldFirst + numberOfInvalids + pleaseFillMoreFieldLast;
+            } else {
+                overallErrorMessage = '';
+            }
+            toastr.error(overallErrorMessage, errorMessage+'!');
+        },
+        errorPlacement: function(error, element) {
+            error.insertAfter(element);
+        },
+        submitHandler: function(form) {
+            $('#btn-processing').html(btnSavingPreloader);
+            $('.preloader').show();
+            form.submit();
+        }
+    });
+    // End :: League Form //
+
     // Start :: Player Update //
     $("#updatePlayerForm").validate({
         ignore: [],
@@ -1670,14 +1828,14 @@ $(document).ready(function() {
         showDropdowns: false,
         showWeekNumbers: false,
         showISOWeekNumbers: false,
-        timePicker: true,
+        timePicker: false,
         timePicker24Hour: true,
         timePickerSeconds: false,
         autoApply: true,
         autoUpdateInput: true,
         alwaysShowCalendars: false,
         startDate: moment().startOf('hour'),
-        // endDate: moment().startOf('hour').add(24, 'hour'),
+        endDate: moment().startOf('hour').add(30, 'days'),
         ranges: {
             'Today': [moment(), moment()],
             'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
@@ -1687,7 +1845,7 @@ $(document).ready(function() {
             'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         },
         locale: {
-            format: 'YYYY-MM-DD HH:mm'
+            format: 'YYYY-MM-DD'
         }
     }, function(start, end, label) {
         // $(this).val(picker.startDate.format('YYYY-MM-DD HH:mm') + ' - ' + picker.endDate.format('YYYY-MM-DD HH:mm'));
@@ -1699,7 +1857,7 @@ $(document).ready(function() {
         showDropdowns: false,
         showWeekNumbers: false,
         showISOWeekNumbers: false,
-        timePicker: true,
+        timePicker: false,
         timePicker24Hour: true,
         timePickerSeconds: false,
         autoApply: true,
@@ -1716,7 +1874,7 @@ $(document).ready(function() {
             'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         },
         locale: {
-            format: 'YYYY-MM-DD HH:mm'
+            format: 'YYYY-MM-DD'
         }
     }, function(start, end, label) {
         // $(this).val(picker.startDate.format('YYYY-MM-DD HH:mm') + ' - ' + picker.endDate.format('YYYY-MM-DD HH:mm'));

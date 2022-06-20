@@ -139,6 +139,18 @@ Route::group(['namespace'=>'admin', 'prefix'=>'adminpanel', 'as'=>'admin.'], fun
                 Route::get('/delete/{id}', 'CmsController@delete')->name('delete');
                 Route::post('/delete-uploaded-image', 'CmsController@deleteUploadedImage')->name('delete-uploaded-image');
             });
+
+            Route::group(['prefix' => 'league', 'as' => 'league.'], function () {
+                Route::get('/list', 'LeaguesController@list')->name('list');
+                Route::post('/ajax-list-request', 'LeaguesController@ajaxListRequest')->name('ajax-list-request');
+                Route::get('/add', 'LeaguesController@add')->name('add');
+                Route::post('/add-submit', 'LeaguesController@add')->name('add-submit');
+                Route::get('/edit/{id}', 'LeaguesController@edit')->name('edit');
+                Route::post('/edit-submit/{id}', 'LeaguesController@edit')->name('edit-submit');
+                Route::get('/status/{id}', 'LeaguesController@status')->name('change-status');
+                Route::get('/delete/{id}', 'LeaguesController@delete')->name('delete');
+                Route::post('/bulk-actions', 'LeaguesController@bulkActions')->name('bulk-actions');
+            });
             
         });
 

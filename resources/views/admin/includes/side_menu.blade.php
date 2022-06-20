@@ -109,6 +109,32 @@ $getSiteSettings = getSiteSettings();
 				</li>
 			@endif
 
+			<!-- League Management Start -->
+			@php
+			$leagueRoutes = ['league.list','league.add','league.edit','league.sort'];
+			@endphp
+			@if ( ($isSuperAdmin) || in_array('league.list', $getAllRoles) )
+				<li class="sidebar-item @if (in_array($currentPage, $leagueRoutes))selected @endif">
+					<a class="sidebar-link has-arrow @if (in_array($currentPage, $leagueRoutes))active @endif" href="javascript:void(0)" aria-expanded="false">
+						<i data-feather="home" class="feather-icon"></i><span class="hide-menu"> @lang('custom_admin.label_menu_league')</span>
+					</a>
+					<ul aria-expanded="false" class="collapse first-level base-level-line @if (in_array($currentPage, $leagueRoutes))in @endif">
+						<li class="sidebar-item">
+							<a href="{{ route('admin.league.list') }}" class="sidebar-link sub-menu">
+								<span class="hide-menu"> @lang('custom_admin.label_list')</span>
+							</a>
+						</li>
+						@if ( ($isSuperAdmin) || (in_array('league.add', $getAllRoles)) )
+						<li class="sidebar-item">
+							<a href="{{ route('admin.league.add') }}" class="sidebar-link sub-menu">
+								<span class="hide-menu"> @lang('custom_admin.label_add')</span>
+							</a>
+						</li>
+						@endif
+					</ul>
+				</li>
+			@endif
+
 			<!-- Promo Code Management Start -->
 			{{-- @php
 			$promoCodeRoutes = ['promoCode.list','promoCode.add','promoCode.edit'];
